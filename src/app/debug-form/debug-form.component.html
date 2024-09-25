@@ -1,0 +1,54 @@
+ <h1 class="title">WebApiDemo</h1>
+<div class="students-card">
+  <div class="formGroup">
+    <h2>Add Student Info Below</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="submitForm()">
+    <div class="control">
+      <label for="name">FirstName: </label>
+      <input type="text" id="firstName"  formControlName="firstName"  />
+    </div>
+    <div class="control">
+      <label for="name">LastName: </label>
+    <input type="text" id="lastName" formControlName="lastName" />
+    </div>
+    <div class="control">
+      <label for="age">Email: </label>
+    <input type="email" id="email" formControlName="email" name="email" />
+    </div>
+
+
+    <button type="submit" [disabled]="studentForm.invalid" class="btn submit" >Submit</button>
+  </form>
+  </div>
+  <div class="stundentsList">
+    <h2>Students</h2>
+    <table class="students-table">
+      <thead>
+        <tr>
+          <th scope="col">Full Names</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.firstName }} {{ student.lastName }}</td>
+          <td>{{ student.email }}</td>
+          <td class="actions">
+            <button class="btn update-btn">Edit</button>
+            <button class="btn delete-btn">Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  <ol>
+    <li *ngFor="let student of students">
+      {{ student.firstName }} {{ student.lastName }}({{ student.email }})<br>
+
+      <!-- <button (click)="deleteStudent(student.id)">Delete</button> -->
+    </li>
+  </ol>
+</div>
+</div>

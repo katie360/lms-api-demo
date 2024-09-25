@@ -1,0 +1,128 @@
+body{
+  height: 100vh;
+  width: 100vh;
+  margin: 0!important;
+  padding: 0;
+  background: green!important;
+}
+
+.students-card{
+display: flex;
+flex-direction: row;
+
+width: 100%;
+justify-content: space-between;
+}
+form{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+
+}
+.stundentsList{
+  width:50% ;
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 35px 10px;
+  background-color: rgba(193, 246, 187, 0.414);
+}
+.formGroup{
+  width:50% ;
+  background-color: rgba(229, 208, 208, 0.579);
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 35px 10px;
+
+}
+
+.control{
+  display: flex;
+  width: 100%;
+  padding: 5px 15px;
+  align-items: baseline;
+
+}
+.control label{
+  width:20% ;
+  font-weight: bold;
+    margin-right: 20px;
+
+}
+.control input{
+  width: 80%;
+  padding: 15px 15px;
+  border:.5px rgb(229, 208, 208) solid;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.submit{
+  background-color: rgb(7, 141, 7);
+  color: white;
+  padding: 10px 25px;
+  width: 300px;
+  border: none;
+  margin: 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.title{
+  text-align: center;
+}
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.students-table th, .students-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.students-table th {
+  background-color: #f2f2f2;
+}
+
+.students-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.students-table tr:hover {
+  background-color: #ddd;
+}
+
+.btn {
+  /* background-color: #007bff; */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  /* background-color: #0056b3; */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Bootstrap Danger Color */
+}
+.update-btn {
+  background-color: #a3ccf7;
+
+}
+.actions{
+  display: flex;
+  gap: 5px;
+}
